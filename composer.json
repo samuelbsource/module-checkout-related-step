@@ -1,0 +1,22 @@
+{
+    "name": "perfectshapes/module-checkout-related-step",
+    "description": "Adds a checkout step for showcasing products related to the products currently in the cart",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Samuel Boczek",
+            "email": "samuelboczek@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "PerfectShapes\\CheckoutRelatedStep\\": ""
+        }
+    }
+}

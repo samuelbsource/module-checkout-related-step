@@ -1,0 +1,19 @@
+<li data-bind="fadeVisible: isVisible, attr: { id: stepCode }">
+    <div id="checkout-related-step-title" class="checkout-related-step step-content" data-role="content">
+
+        <!-- Each product -->
+        <div class="product-group" data-bind="repeat: { foreach: related(), item: '$item' }">
+            <div class="product-group-name step-title">Products related to <span text="$item().name"></span></div>
+            <div class="product-group-products" data-bind="attr: { id: $item().id }"
+                afterRender="function (target, viewModel) { viewModel.activateSlick(target, $item().products) }"></div>
+        </div>
+
+        <div class="actions-toolbar" id="checkout-related-buttons-container">
+            <div class="primary">
+                <button data-role="opc-continue" class="button action continue primary" click="navigateToNextStep">
+                    <span data-bind="i18n: 'Next'">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</li>
